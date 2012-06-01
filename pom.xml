@@ -1,0 +1,99 @@
+<?xml version="1.0"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<!-- based off weld numberguess example which was based off of original 
+		Sun J2EE tutorial numberguess example. Long live Duke! -->
+	<groupId>org.github.caucho.javaee6samples</groupId>
+	<artifactId>candi-jsf-numberguess</artifactId>
+	<packaging>war</packaging>
+	<name>CDI Examples: Numberguess (JSF)</name>
+	<version>1.1.0-SNAPSHOT</version>
+
+
+	<description>
+      Example for CDI, implementation of JSR 299: Contexts and Dependency Injection for Java EE
+      Based on Weld numberguess example,  which is based on the orginal numberguess program. Long live Duke!
+   </description>
+
+	<url>https://github.com/caucho/javaee6_samples</url>
+	<licenses>
+		<license>
+			<name>Apache License, Version 2.0</name>
+			<distribution>repo</distribution>
+			<url>http://www.apache.org/licenses/LICENSE-2.0.html</url>
+		</license>
+	</licenses>
+
+	<dependencies>
+
+      <dependency>
+            <groupId>javax</groupId>
+            <artifactId>javaee-web-api</artifactId>
+            <version>6.0</version>
+            <scope>provided</scope>
+        </dependency>
+
+	</dependencies>
+
+	<profiles>
+	</profiles>
+
+	<build>
+		<finalName>numguess</finalName>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-war-plugin</artifactId>
+				<version>2.1.1</version>
+				<configuration>
+					<warSourceExcludes>WEB-INF/classes/**,WEB-INF/lib/**</warSourceExcludes>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-clean-plugin</artifactId>
+				<version>2.4.1</version>
+				<configuration>
+					<failOnError>false</failOnError>
+					<filesets>
+						<fileset>
+							<!-- clean up files from war:inplace -->
+							<directory>src/main/webapp</directory>
+							<includes>
+								<include>WEB-INF/classes/**</include>
+								<!-- <include>WEB-INF/lib/**</include>   -->
+								<include>WEB-INF/logging.properties</include>
+							</includes>
+							<followSymlinks>false</followSymlinks>
+						</fileset>
+					</filesets>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>2.3.2</version>
+				<configuration>
+					<source>1.6</source>
+					<target>1.6</target>
+				</configuration>
+			</plugin>
+			
+		</plugins>
+	</build>
+
+	<properties>
+	</properties>
+
+	<repositories>
+       <repository>
+           <id>java.net</id>
+           <name>java.net Repository</name>
+           <url>http://download.java.net/maven/2</url>
+       </repository>
+	</repositories>
+
+
+</project>
+
