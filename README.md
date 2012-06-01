@@ -1,7 +1,7 @@
 Number guess application
 ------------------------
 
-This simple sample aims to demonstrate the support of JEE6 applications (JSF, Annocation, Injection etc.).
+This simple sample aims to demonstrate the support of JEE6 applications (JSF, Annotation, Injection etc.).
 
 Building the Application
 ------------------------
