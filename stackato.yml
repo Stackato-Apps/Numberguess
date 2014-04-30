@@ -1,4 +1,4 @@
-name: numguess
+name: numberguess
 mem: 512M
 framework:
   type: buildpack
