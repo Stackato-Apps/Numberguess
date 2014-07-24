@@ -1,6 +1,3 @@
 name: numberguess
 mem: 512M
-framework:
-  type: buildpack
-env:
-  BUILDPACK_URL: git://github.com/heroku/heroku-buildpack-java.git
+buildpack: git://github.com/heroku/heroku-buildpack-java.git
