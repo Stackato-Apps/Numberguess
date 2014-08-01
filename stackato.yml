@@ -1,3 +1,0 @@
-name: numberguess
-mem: 512M
-buildpack: git://github.com/heroku/heroku-buildpack-java.git
