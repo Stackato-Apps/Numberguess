@@ -1,4 +1,4 @@
 applications:
 - name: numberguess
-  buildpack: git://github.com/heroku/heroku-buildpack-java.git
+  docker_image: stackatoapps/numberguess:latest
   mem: 512M
