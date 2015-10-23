@@ -29,13 +29,11 @@ That will create the *numguess.war* file within the 'target' directory.
 Running the Application
 -----------------------
 
-To run the application, make sure you have the Stackato client installed and that you are logged in successfully for your desired target environment (e.g. http://api.stackato.local).
+To run the application, make sure you have the HPE Helion Stackato client installed and that you are logged in successfully for your desired target environment.
 
 Then execute:
 
-	stackato push -n 
-
-Notice that it detected the app type as "Java EE Application".
+	stackato push -n
 
 Then go on your application url.
 
